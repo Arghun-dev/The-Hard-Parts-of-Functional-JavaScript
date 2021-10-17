@@ -15,5 +15,5 @@ Code we save ('define') functions and can use (call / invoke / execute / run) la
 
 Created to run the code of a function - has 2 Parts (We've already seen them)
 
-- Thread of execution
+- Thread of execution => because we're gonna be going the the code of a function line by line
 - Memory
