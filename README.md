@@ -29,3 +29,9 @@ Created to run the code of a function - has 2 Parts (We've already seen them)
 **What keyword tells us actually to end this function and move on** => `return`
 
 as soon as we `return` the function will be popped off from the call stack.
+
+so what remains on top of the call stack? is there anything yet on top of the call stack?
+
+**Yes, always on the bottom of the call stack, is our global execution context, think of all of our code, inside a function with the label `global`, and as soon as we turn on JavaScript, start running the code, run that global function, run the overall code, so the global() is always on the bottom of the call stack**
+
+**If I was running another function inside that function, the inner function would be added to the top of the outer function insdie the call stack**
