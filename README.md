@@ -111,3 +111,7 @@ function createFunction() {
 const generatedFunc = createFunction();
 const result = generatedFunc(3); // 6
 ```
+
+So the question is: **Why did I save a nicely semantically that means kind of meaningfully named function inside another function only to then return it out, giving it a really bad name out and use it globally?**
+
+`Well, saving a function, declaring storing a function inside the execution context of running another functions of saving its local memory inside another function, when that function gets returned out, it gets the most powerful peoperty bonus feature of JavaScript that we can ask for`
