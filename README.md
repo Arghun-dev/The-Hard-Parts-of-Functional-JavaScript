@@ -70,3 +70,7 @@ const result = copyArrayAndManipulate([1,2,3], multiplyBy2);
 - Enables powerful pro-level functions like `once` and `memoize`
 - Many JavaScript design pattrns including the module pattern use closure
 - Build iterators, handle partial application and maintain state in asynchronous world
+
+`once function`: this is a function that can turn other functions into functions that are gonna run once. If they run them again, they don't work, and already you might be thinking, hold on, that doesn't make sense, because I know how functions work. They don't remember anything from their previous running, they're brand new every time.
+
+And yet, hold on, I'm telling you they're gonna somehow remember they've been run before, and not run again. We can achieve `memoization`, a core performance optimizer.
