@@ -98,3 +98,16 @@ This would be really, really special that allow us to do things like say, => oh,
 **All of these will start with us returning a function from the invocation, from the running of another function**
 
 So we have to understand `returning functions from other functions` =>  Functions can be returned from other functions in JavaScript
+
+```js
+function createFunction() {
+  function multiplyBy2() {
+    return num * 2;
+  }
+  
+  return multiplyBy2;
+}
+
+const generatedFunc = createFunction();
+const result = generatedFunc(3); // 6
+```
