@@ -39,7 +39,7 @@ so what remains on top of the call stack? is there anything yet on top of the ca
 
 ## Higher Order Functions
 
-Takes in a function or passes out a function
+any function that takes in a function or passes out a function is called `higher order function`
 
 imagine we have 3 functions called `copyArrayAndMultiplyBy2`, `copyArrayAndDivideBy2`, `copyArrayAndAdd3` => as you can see all of these functions are same, but in just functionality they are different. `*`, `/`, `+` => in JavaScript you can not pass functionality like a string as a paramater.
 
