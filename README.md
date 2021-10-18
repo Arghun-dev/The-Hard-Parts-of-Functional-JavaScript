@@ -35,3 +35,8 @@ so what remains on top of the call stack? is there anything yet on top of the ca
 **Yes, always on the bottom of the call stack, is our global execution context, think of all of our code, inside a function with the label `global`, and as soon as we turn on JavaScript, start running the code, run that global function, run the overall code, so the global() is always on the bottom of the call stack**
 
 **If I was running another function inside that function, the inner function would be added to the top of the outer function insdie the call stack**
+
+
+## Higher Order Functions
+
+imagine we have 3 functions called `copyArrayAndMultiplyBy2`, `copyArrayAndDivideBy2`, `copyArrayAndAdd3` => as you can see all of these functions are same, but in just functionality they are different. `*`, `/`, `+` => in JavaScript you can not pass functionality like a string as a paramater => you
