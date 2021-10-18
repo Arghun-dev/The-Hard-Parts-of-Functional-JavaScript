@@ -62,3 +62,11 @@ const result = copyArrayAndManipulate([1,2,3], multiplyBy2);
 ```
 
 **Behind the scenes `functions` are just `objects`**
+
+
+## Closure
+
+- Closures is the most esoteric of JavaScript concepts
+- Enables powerful pro-level functions like `once` and `memoize`
+- Many JavaScript design pattrns including the module pattern use closure
+- Build iterators, handle partial application and maintain state in asynchronous world
