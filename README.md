@@ -58,3 +58,5 @@ function copyArrayAndManipulate(array, instructions) {
 function multiplyBy2 = (input) => input * 2;
 const result = copyArrayAndManipulate([1,2,3], multiplyBy2);
 ```
+
+**Behind the scenes `functions` are just `objects`**
