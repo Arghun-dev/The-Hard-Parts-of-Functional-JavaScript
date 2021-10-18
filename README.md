@@ -74,3 +74,8 @@ const result = copyArrayAndManipulate([1,2,3], multiplyBy2);
 `once function`: this is a function that can turn other functions into functions that are gonna run once. If they run them again, they don't work, and already you might be thinking, hold on, that doesn't make sense, because I know how functions work. They don't remember anything from their previous running, they're brand new every time.
 
 And yet, hold on, I'm telling you they're gonna somehow remember they've been run before, and not run again. We can achieve `memoization`, a core performance optimizer.
+
+
+**Functions get a new memory every run / invocation**
+
+we do know that every time a function gets executed, run, invoke as an invocation, it creates a brand new local memory. => a brand new execution context as a little temporary store memory => when we finish running that function, that's all deleted. when we run the function again, it doesn't remember the data stored in the previous running of the function, and actually we want that, every time a funciton called and finished the local memory of that function should be freshed.
