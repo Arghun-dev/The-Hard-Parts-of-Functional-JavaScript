@@ -79,3 +79,15 @@ And yet, hold on, I'm telling you they're gonna somehow remember they've been ru
 **Functions get a new memory every run / invocation**
 
 we do know that every time a function gets executed, run, invoke as an invocation, it creates a brand new local memory. => a brand new execution context as a little temporary store memory => when we finish running that function, that's all deleted. when we run the function again, it doesn't remember the data stored in the previous running of the function, and actually we want that, every time a funciton called and finished the local memory of that function should be freshed.
+
+
+And yet, what if we could have that function also have a permanent memory attached to it. that could change everything about how we write code.
+
+
+### Functions with Memories
+
+- When our functions get called, we create a live store of data (local memory / variable environment / state) for that function's execution context.
+- When the function finishes executing, it's local memory is deleted (except the returned value)
+- But what if our functions could hold on to live data between executions?
+- This would let our function definitions have an associated cache / persistent memory
+- But it all starts with us **returning a function from another function**
