@@ -39,4 +39,22 @@ so what remains on top of the call stack? is there anything yet on top of the ca
 
 ## Higher Order Functions
 
-imagine we have 3 functions called `copyArrayAndMultiplyBy2`, `copyArrayAndDivideBy2`, `copyArrayAndAdd3` => as you can see all of these functions are same, but in just functionality they are different. `*`, `/`, `+` => in JavaScript you can not pass functionality like a string as a paramater => you
+imagine we have 3 functions called `copyArrayAndMultiplyBy2`, `copyArrayAndDivideBy2`, `copyArrayAndAdd3` => as you can see all of these functions are same, but in just functionality they are different. `*`, `/`, `+` => in JavaScript you can not pass functionality like a string as a paramater.
+
+So, what should we do => we have wrap this, in another function => called `higher order function` => How?
+
+example:
+
+```js
+function copyArrayAndManipulate(array, instructions) {
+  const output = [];
+  for(let i = 0; i < array.length; i++) {
+     output.push(instructions(array[i]))
+  }
+  
+  return output;
+}
+
+function multiplyBy2 = (input) => input * 2;
+const result = copyArrayAndManipulate([1,2,3], multiplyBy2);
+```
