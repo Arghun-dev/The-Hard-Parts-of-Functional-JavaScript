@@ -93,3 +93,6 @@ And yet, what if we could have that function also have a permanent memory attach
 - But it all starts with us **returning a function from another function**
 
 This would be really, really special that allow us to do things like say, => oh, you've previously run this function I know that, because in my rememberence of the previous running, I've stalled that you previously run me, so you can't run me again, So I can limit a function to only run one time and a thousand more things we're gonna see.
+
+
+**All of these will start with us returning a function from the invocation, from the running of another function**
