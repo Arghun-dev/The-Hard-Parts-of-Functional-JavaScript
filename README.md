@@ -119,3 +119,17 @@ So the question is: **Why did I save a nicely semantically that means kind of me
 ### Nested Function Scope
 
 So, we saw there that a function can be returned from the running with other function, stored in the global label, used that in the function by its new global label.
+
+**Calling a function in the same function call as it was defined**
+
+```js
+function outer() {
+  let counter = 0;
+  function incrementCounter() {
+    counter++;
+  }
+  incrementCounter();
+}
+
+outer();
+```
