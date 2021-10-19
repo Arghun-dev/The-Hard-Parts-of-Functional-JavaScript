@@ -151,3 +151,5 @@ const myNewFunction = outer();
 myNewFunction();
 myNewFunction();
 ```
+
+**Always when I return the `incrementCounter` function out from the `outer` function, I got something else with that function => `it took with it all the surrounding data from where that function was saved, where it was borned, where it was stored` => `it grabbed its surrounding data, and brought it out on the` `backpack` of the function**
