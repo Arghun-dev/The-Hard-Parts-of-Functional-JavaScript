@@ -153,3 +153,10 @@ myNewFunction();
 ```
 
 **Always when I return the `incrementCounter` function out from the `outer` function, I got something else with that function => `it took with it all the surrounding data from where that function was saved, where it was borned, where it was stored` => `it grabbed its surrounding data, and brought it out on the` `backpack` of the function**
+
+
+### So what do we call this? of getting surrounding data of the function definition inside a `packpack`
+
+How does the function get to grab onto what it surrounding data and return it out with the function definition?
+
+As soon as, we declare `incrementCounter`, that is literally saving in the computer's memory, in the computer store of function definition, `under the hood if you console.log the function you will see that`, `that behind the scenes, in JavaScript immediately gets a hidden property => in JavaScript you will see the hidden properties inside` => `[[scope]]`
