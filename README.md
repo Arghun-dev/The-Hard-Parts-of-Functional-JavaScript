@@ -135,3 +135,19 @@ outer();
 ```
 
 this is gonna have extraordinary consequences. And also ourselves we thinking what determines the fact that when I run `incrementCounter` inside `outer` and I don't find counter inside of `incrementCounter`, I'm somehow going to have access to counter stored in `outer`
+
+`elegant example`
+
+```js
+funtion outer() {
+  let counter = 0;
+  function incrementCounter() {
+    counter++;
+  }
+  return incrementCounter;
+}
+
+const myNewFunction = outer();
+myNewFunction();
+myNewFunction();
+```
