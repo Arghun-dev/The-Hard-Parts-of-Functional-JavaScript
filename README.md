@@ -160,3 +160,7 @@ myNewFunction();
 How does the function get to grab onto what it surrounding data and return it out with the function definition?
 
 As soon as, we declare `incrementCounter`, that is literally saving in the computer's memory, in the computer store of function definition, `under the hood if you console.log the function you will see that`, `that behind the scenes, in JavaScript immediately gets a hidden property => in JavaScript you will see the hidden properties inside` => `[[scope]]`
+
+`[[scope]]`: it is a hidden property that links to where all this surrounding data is stored => it gives a little link to all that surrounding data.
+
+Meaning when I return `incrementCounter` function out of `outer` into `muNewFunction` it will get all the surrounding data with it, through that hidden property `([[scope]])`
