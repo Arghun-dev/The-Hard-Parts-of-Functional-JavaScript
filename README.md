@@ -164,3 +164,9 @@ As soon as, we declare `incrementCounter`, that is literally saving in the compu
 `[[scope]]`: it is a hidden property that links to where all this surrounding data is stored => it gives a little link to all that surrounding data.
 
 Meaning when I return `incrementCounter` function out of `outer` into `muNewFunction` it will get all the surrounding data with it, through that hidden property `([[scope]])`
+
+And also, it aint going anywhere, it's not like the execution context temporary local memory => It's `permamnent` as long as its function definitions they're not overwritten.
+
+We can't get access to it though in any other way besides running this function.
+
+And hoping the function was written in such a way when it was defined, when was born, was initially saved, that it looks for something in `local memory`, it aint there, then it goes out and looks on the scope property into the backpack.
