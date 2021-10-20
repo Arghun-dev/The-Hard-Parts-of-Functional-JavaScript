@@ -202,3 +202,7 @@ Meaning that, if you save a function inside of another function, when it exits t
 - Closure
 
 **The backpack or closure of live data is attached incrementCounter then to myNewFunction through a hidden property known as `[[scope]]` which persists when the inner function is returned out**
+
+### Individual backpacks
+
+if we run `outer` again and store the returned `incrementCounter` function defintion in `anotherFunction` this new incrementCounter function was created in a new execution context and therefore has a brand new independant backpack.
