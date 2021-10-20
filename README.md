@@ -221,3 +221,5 @@ anotherFunction();
 ```
 
 if you console.log the `counter` you will see the `1, 2, 1, 2` => because the backpack for the `myNewFunction` is totally different from the backpack of the `anotherFunction`
+
+Because when you run `myNewFunction` and `anotherFunction` they will create totally different `execution contexts` with totally different `backpacks`
