@@ -172,3 +172,5 @@ We can't get access to it though in any other way besides running this function.
 And hoping the function was written in such a way when it was defined, when was born, was initially saved, that it looks for something in `local memory`, it aint there, then it goes out and looks on the scope property into the backpack.
 
 ### Alright let's talk about what this backpack is actually called?
+
+Actually, the data that comes through `backpack`, it is **persistent**, and also it's **data**, it's referenced, it's linked by a **scope** property => `P.S.R.D`
