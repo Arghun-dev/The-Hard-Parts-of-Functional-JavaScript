@@ -246,3 +246,17 @@ Because when you run `myNewFunction` and `anotherFunction` they will create tota
 that means we do each line, we finish it, and then we go to the next line.
 
 in `JavaScript` if we have a line of code to do => we have to do it, it's the only line of code we can do, And we have to finish on it, before we move on to the next line.
+
+### Asynchronisity is the backbone of modern web development in JavaScript yet...
+
+JavaScript is:
+
+- Single threaded (one command runs at a time)
+- Synchronously executed (each line is run in order the code appears)
+
+So what if we have a task:
+
+- Accessing Twitter's server to get new tweets that takes a long time
+- Code we want to run use those tweets
+
+**Challenge**: We want to wait for the tweets, to be stored in tweets, so that they're there to run displayTweets on - but no code can run in the meantime.
