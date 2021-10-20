@@ -231,3 +231,12 @@ Because when you run `myNewFunction` and `anotherFunction` they will create tota
 - Module Pattern: Preserve state for the life of an application without polluting the namespace
 - Asunchronous JavaScript: Callbacks and Promises rely on Closures to persist state in an asynchronous environment.
 
+
+# Asynchronous JavaScript
+
+**Promises, Async & the Event Loop**
+
+- Promises: the most significant ES6 feature
+- Asynchronisity: the feature that makes dynamic web applications possible
+- The event loop: JavaScript's triage
+- Microtask queue, Callback queue and Web Browser features (APIs)
