@@ -267,7 +267,7 @@ So what if we have a task:
 
 So what should we do?
 
-**Slow function blocks further code running**
+**Slow function blocks further code running** => **So what we can do people??**
 
 ```js
 const tweets = getTweets(API);
@@ -279,3 +279,19 @@ displayTweets(tweets);
 // more code to run
 console.log("I want to runnnn!")
 ```
+
+**Let's make it a little harder** => **What if we try to delay a function directly using `setTimeout`?**
+
+`setTimeout` is a built in function - it's first argument is the function to delay followed by `ms` to delay by
+
+```js
+function printHello() {
+  console.log("Hello");
+};
+
+setTimeout(printHello, 1000);
+
+console.log("Me first!");
+```
+
+the logs will appear => first: `Me First`, then second: `Hello`
