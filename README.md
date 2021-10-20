@@ -266,3 +266,16 @@ So what if we have a task:
 **Challenge**: We want to wait for the tweets, to be stored in tweets, we have to send request to the servers of `Tweeter` and surely, this will take a time to get those tweets - but no code can run in the meantime in JavaScript, because JavaScript is a `synchronous` language. So it's gonna be a really big problem:))
 
 So what should we do?
+
+**Slow function blocks further code running**
+
+```js
+const tweets = getTweets(API);
+
+// 350ms wait while a request is sent to Tweeter HQ
+
+displayTweets(tweets);
+
+// more code to run
+console.log("I want to runnnn!")
+```
