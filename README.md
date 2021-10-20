@@ -263,4 +263,6 @@ So what if we have a task:
 - Accessing Twitter's server to get new tweets that takes a long time
 - Code we want to run use those tweets
 
-**Challenge**: We want to wait for the tweets, to be stored in tweets, so that they're there to run displayTweets on - but no code can run in the meantime.
+**Challenge**: We want to wait for the tweets, to be stored in tweets, we have to send request to the servers of `Tweeter` and surely, this will take a time to get those tweets - but no code can run in the meantime in JavaScript, because JavaScript is a `synchronous` language. So it's gonna be a really big problem:))
+
+So what should we do?
