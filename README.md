@@ -240,3 +240,7 @@ Because when you run `myNewFunction` and `anotherFunction` they will create tota
 - Asynchronisity: the feature that makes dynamic web applications possible
 - The event loop: JavaScript's triage
 - Microtask queue, Callback queue and Web Browser features (APIs)
+
+**JavaScript is a `single threaded` language it means that JavaScript runs the code `line by line`** => So JavaScript is `synchronous` language
+
+that means we do each line, we finish it, and then we go to the next line.
