@@ -193,3 +193,12 @@ is the overall concept for this.
 The notion of `lexical scoping` => It's the backpack as a result of JavaScript being a lexically scoped language, one that brings the data with the function, wherever that function goes => `hidden on the scope property, hidden on the backpack`
 
 Meaning that, if you save a function inside of another function, when it exits that should be all deleted => `nope` => but that data with us on the backpack, so when we run that function, it still has access to the persistent data from it's backpack
+
+### What can we call this backpack?
+
+- Closed Over Variable Environment (C.O.V.E)
+- Persistent Lexical Scope Referenced Data (P.L.S.R.D)
+- Backpack
+- Closure
+
+**The backpack or closure of live data is attached incrementCounter then to myNewFunction through a hidden property known as `[[scope]]` which persists when the inner function is returned out**
