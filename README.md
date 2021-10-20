@@ -206,3 +206,18 @@ Meaning that, if you save a function inside of another function, when it exits t
 ### Individual backpacks
 
 if we run `outer` again and store the returned `incrementCounter` function defintion in `anotherFunction` this new incrementCounter function was created in a new execution context and therefore has a brand new independant backpack.
+
+
+if you run this code
+
+```js
+const myNewFunction = outer();
+myNewFunction();
+myNewFunction();
+
+const anotherFunction = outer();
+anotherFunction();
+anotherFunction();
+```
+
+if you console.log the `counter` you will see the `1, 2, 1, 2` => because the backpack for the `myNewFunction` is totally different from the backpack of the `anotherFunction`
