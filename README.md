@@ -185,3 +185,11 @@ That is to say, where I save my function, determines for the rest of that functi
 `JavaScript is lexically scoped language` => **that means that even if I return my function out and theoretially all this data should have been deleted => `Nope`, because I have this fundamental rule of lexically scoped language** => **I'm gonna have to grab all that data behind the scenes, and put it out on the `backpack`**
 
 `Technically we call this =>` # Closure
+
+### Closure
+
+is the overall concept for this.
+
+The notion of `lexical scoping` => It's the backpack as a result of JavaScript being a lexically scoped language, one that brings the data with the function, wherever that function goes => `hidden on the scope property, hidden on the backpack`
+
+Meaning that, if you save a function inside of another function, when it exits that should be all deleted => `nope` => but that data with us on the backpack, so when we run that function, it still has access to the persistent data from it's backpack
