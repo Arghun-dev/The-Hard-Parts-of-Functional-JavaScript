@@ -249,6 +249,10 @@ in `JavaScript` if we have a line of code to do => we have to do it, it's the on
 
 ### Asynchronisity is the backbone of modern web development in JavaScript yet...
 
+`single-threaded`: `one command runs at a time`
+
+`synchronous`: `the code runs line-by-line, as the way code appears`
+
 JavaScript is:
 
 - Single threaded (one command runs at a time)
