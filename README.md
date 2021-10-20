@@ -176,3 +176,5 @@ And hoping the function was written in such a way when it was defined, when was 
 Actually, the data that comes through `backpack`, it is **persistent**, and also it's **data**, it's referenced, it's linked by a **scope** property => `P.S.R.D`
 
 `scope`: is the rules in any programming language, for at any given line of code, what data do I have available to me?
+
+It's called `lexical` or `static` scoping.
