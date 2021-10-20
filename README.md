@@ -173,8 +173,13 @@ And hoping the function was written in such a way when it was defined, when was 
 
 ### Alright let's talk about what this backpack is actually called?
 
-Actually, the data that comes through `backpack`, it is **persistent**, and also it's **data**, it's referenced, it's linked by a **scope** property => `P.S.R.D`
+Actually, the data that comes through `backpack`, it is **persistent**, and also it's **data**, it's referenced, it's linked by a **scope** property, and also JavaScript is a `lexically` scoped language => `P.L.S.R.D`
 
 `scope`: is the rules in any programming language, for at any given line of code, what data do I have available to me?
 
 It's called `lexical` or `static` scoping.
+
+### Lexical Scoping => 
+That is to say, where I save my function, determines for the rest of that function's life, whenever it gets run, under whatever new label it gets, what data it will have access to when that function runs. Is not where I run it, that would be called dynamic scoping, It changes depending on where I run the function => **JavaScript is a static or lexically scoped language** => `lexical means the physical positioning on the page` => I physically positioned `inner` inside the running of `outer` function.
+
+`JavaScript is lexically scoped language` => **that means that even if I return my function out and theoretially all this data should have been deleted => `Nope`, because I have this fundamental rule of lexically scoped language** => **I'm gonna have to grab all that data behind the scenes, and put it out on the `backpack`**
