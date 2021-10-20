@@ -223,3 +223,11 @@ anotherFunction();
 if you console.log the `counter` you will see the `1, 2, 1, 2` => because the backpack for the `myNewFunction` is totally different from the backpack of the `anotherFunction`
 
 Because when you run `myNewFunction` and `anotherFunction` they will create totally different `execution contexts` with totally different `backpacks`
+
+**Closure gives our functions persistent memories and entirely new toolkit for writing professional code**
+
+- Helper Functinos: everyday professional helper functions like `once` and `memoize`
+- Iterators and Generators: which use lexical scoping and closure to achieve the most contemporary patterns for handling data in JavaScript
+- Module Pattern: Preserve state for the life of an application without polluting the namespace
+- Asunchronous JavaScript: Callbacks and Promises rely on Closures to persist state in an asynchronous environment.
+
