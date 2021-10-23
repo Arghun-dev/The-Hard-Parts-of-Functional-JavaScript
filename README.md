@@ -329,10 +329,14 @@ Where is the JavaScript running? => `Browser`
 
 `Browser` has more than just JavaScript in it.
 
-`Web Broswer` => `JS Engine` + `Dev Tools` + `console` + `Network Requests` + `DOM`
+`Web Broswer` => `JS Engine` + `Dev Tools` + `console` + `Network Requests` + `DOM` + `Timer`
 
 **All these features we can not code directly** => **But people, we do have a programming language, that lets us use these features** => **And that programming language is: `JavaScript`**
 
 **But we're not actually gonna find any of these features in JavaScript, So how do we interact with them?**
 
 `in JavaScript we have some facade functions => They are functions, that they look like JavaScript, But they are actually facades for web browser features.`
+
+And one of those features believe it or not => **JavaScript doesn't even have the feature of `Timer`, that's in the web browser too. And we get labels for each of these features**, for example label for the `Timer` in web browser is: `setTimeout`
+
+`setTimeout` is not doing anything of interest in JavaScript, instead it's a label for the timer built to the web browser.
