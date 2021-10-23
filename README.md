@@ -341,4 +341,10 @@ And one of those features believe it or not => **JavaScript doesn't even have th
 
 `setTimeout` is not doing anything of interest in JavaScript, instead it's a label for the timer built to the web browser.
 
-`document` is a label for HTML DOM web browser feature.
+`document` is a label for HTML DOM web browser feature. (So, whenever you see, `document` that aint do anything in `JavaScript`, it's a command to go and use the feature of web browser)
+
+`xhr / fetch` is the lable for making network request
+
+`console` for console
+
+All of these features, are not JavaScript at all. All of thsese are web browser features.
