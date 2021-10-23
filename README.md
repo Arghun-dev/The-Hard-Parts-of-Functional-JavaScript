@@ -321,3 +321,18 @@ We need to add some new components
 - Web Browser APIs/Node Background APIs
 - Promises
 - Event Loop, Callback/Task queue and micro task queue
+
+
+## Asynchronous Browser
+
+Where is the JavaScript running? => `Browser`
+
+`Browser` has more than just JavaScript in it.
+
+`Web Broswer` => `JS Engine` + `Dev Tools` + `console` + `Network Requests` + `DOM`
+
+**All these features we can not code directly** => **But people, we do have a programming language, that lets us use these features** => **And that programming language is: `JavaScript`**
+
+**But we're not actually gonna find any of these features in JavaScript, So how do we interact with them?**
+
+`in JavaScript we have some facade functions => They are functions, that they look like JavaScript, But they are actually facades for web browser features.`
