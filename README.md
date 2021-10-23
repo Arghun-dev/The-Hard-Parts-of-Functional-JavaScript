@@ -295,3 +295,29 @@ console.log("Me first!");
 ```
 
 the logs will appear => first: `Me First`, then second: `Hello`
+
+```js
+function printHello() {
+  console.log("Hello");
+};
+
+setTimeout(printHello, 0);
+
+console.log("Me first!");
+```
+
+The logs will apear => first: `Me First`, then second: `Hello`
+
+### JavaScript is not enough - We need new pieces (some of which aren't JavaScript at all)
+
+Our Core JavaScript engine has 3 main parts:
+
+- Thread of execution
+- Memory / Varivable Environment
+- Call Stack
+
+We need to add some new components
+
+- Web Browser APIs/Node Background APIs
+- Promises
+- Event Loop, Callback/Task queue and micro task queue
