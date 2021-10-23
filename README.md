@@ -340,3 +340,5 @@ Where is the JavaScript running? => `Browser`
 And one of those features believe it or not => **JavaScript doesn't even have the feature of `Timer`, that's in the web browser too. And we get labels for each of these features**, for example label for the `Timer` in web browser is: `setTimeout`
 
 `setTimeout` is not doing anything of interest in JavaScript, instead it's a label for the timer built to the web browser.
+
+`document` is a label for HTML DOM web browser feature.
