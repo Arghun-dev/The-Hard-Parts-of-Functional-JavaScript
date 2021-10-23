@@ -348,3 +348,16 @@ And one of those features believe it or not => **JavaScript doesn't even have th
 `console` for console
 
 All of these features, are not JavaScript at all. All of thsese are web browser features.
+
+
+## Web API Example
+
+**ES5 solution: introducing callback functions and web browser APIs**
+
+```js
+function printHello() { console.log('Hello') };
+
+setTimeout(printHello, 1000);
+
+console.log('Me First');
+```
