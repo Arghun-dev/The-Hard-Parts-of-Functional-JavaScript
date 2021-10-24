@@ -442,3 +442,6 @@ But if the `CallStack` is empty, or if I head down to the `queue`, I grab the fu
 **Benefits:**
 
 - Super explicit once you understand how it works under-the-hood
+
+
+A lot of times these background features, the function that's then automatically called, the background feature gets some data, so for example if the background feature, speaking over the network, to get some new data in, well then where that data gonna show up, that data shows up as the input, automatically inserted into the running of that `printHello` function, that's pretty amazing, But problem with that, is that means, is the data is only available inside the `execution context` of that `printHello` function? that's pretty rough, and that's what created something known as `callback hell`
