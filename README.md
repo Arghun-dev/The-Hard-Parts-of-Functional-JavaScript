@@ -404,4 +404,6 @@ And in `1001ms` the function of `printHello` is going to say, okkkk, finally, yo
 
 And finally at `1001ms`, what do we think happens? is it `printHello` allowed out from `CallBack Queue` to the `Call Stack`?
 
-Nooooo, it's still not allowed out. And `printHello` is gonna sit there and wait, and instead what's going to run first? `console.log("Me First")`
+Nooooo, it's still not allowed out. And `printHello` is gonna sit there and wait, and instead what's going to run first? at `1001ms` => `console.log("Me First")`
+
+Now, at the `1002ms` => `printHello` is going to grabbed out of queue and put on to the callStack and going to executed.
