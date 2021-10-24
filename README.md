@@ -424,3 +424,5 @@ If the CallStack is not empty, if there's still further global code to run, **Th
 But if the `CallStack` is empty, or if I head down to the `queue`, I grab the function, I put it out to the `CallStack`
 
 ### And What is that know as that little feature? (That little feature that does that very very fast checking, every single line, before it runs any line of code, It checks is there anything on the call stack, if there is, just do it, is there anything left running global? => just do it => if it's all finished, head down to the queue)
+
+## And that feature is known as the `Event Loop`
