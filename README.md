@@ -506,3 +506,25 @@ Promise = {
  onfullfilled: []
 }
 ```
+
+And `simultaniously` I'm about to go and setup some background web browser stuff in the `Web Browser` a `Network Request` and we're doing this, at roughly I guess in `0ms`.
+
+and in the web browser you set an address to make network request => and here, exactly just like `timer` => it has `complete?` and `on completion`, in `0ms` is it complete? `No`, let's get started, it's gonna send a `message` over the internet to `Twitter's Servers` => that started on `0ms` => But it's not completed at this point => 
+
+`on completion` => what is gonna happen?
+
+Well, if you remember when I said `setTimeout` => when you setup a background feature => we had a function here, that would auto run on the `Call Stack` on completion of the background task => But anyone see a function that passed into the function of `fecth` here? `no` => here instead of having a function passed in, you've got this pretty object `Promise` that's kind of keeping track of the fact that we set something up in the background, And in fact when that data comes back, where could that go? 
+
+in JavaScript the data comes back is going to sit in the `value` property of `Promise` object => 
+
+```js
+futureData.value = the data comes back from the server
+```
+
+So, let us speak what those five words did => `fetch(API)`
+
+They setup in the background, 
+
+- they speak to the internet, with all the information it needs to go and get the right data back 
+- but they also setup in JavaScript a little placeholder object => known as a `Promise` object
+- And that was stored into futureData
