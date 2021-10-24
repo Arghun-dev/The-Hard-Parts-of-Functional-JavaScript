@@ -364,6 +364,8 @@ console.log('Me First');
 
 **We're interacting with a world outside of JavaSctipt now - So we need rules**
 
+`setTimeout` do not nothing in JavaScript
+
 ```js
 function printHello() {
   console.log("Hello");
@@ -377,3 +379,29 @@ blockFor1Sec();
 
 console.log("Me First");
 ```
+
+in here:
+
+- first we're defining a function with a label `printHello` in  global memory
+- second we're defining a function with a label `blockFor1Sec` in global memory
+- now things get interesting, the `setTimeout` a facade function, is going to send a message to web browser, to set a `Timer` with duration of `0ms` and a `function definition` to run `on completion` in the timer of the web browser
+
+now as we see `setTimeout` is `0ms` and normally, `printHello` should run
+
+But there's a point a here  => `queue`.
+
+What, do we call little functions passed to the other functions => `callback` => `setTimeout(printHello, 0ms)` => `printHello` is callback function here.
+
+So, it's a `Callback Queue`.
+
+Do not by the way confuse it, or do not confuse these callbacks, with the ones, we saw yesterday where they run inside of the higher order functions, no no no, this one is grabbed and thrown right out of it. `setTimeout` is just a command, at no point, `printHello` runs inside of `setTimeout`, they just grab this function, and throw it into the web browser, and it's stored here.
+
+At this point in `0ms`, `printHello` **ain't** go on the **CallStack** directly, it's gonna have to queue it self up here into the `Callback Queue` and ready to run.
+
+But as we `completed` `setTimeout` JavaScript continues to run the code, at `1ms`, now in `1ms` we're going to run `blockFor1Sec` function, so `blockFor1Sec` is going to the `CallStack`, and blockFor1Sec is going to block for `1000ms`
+
+And in `1001ms` the function of `printHello` is going to say, okkkk, finally, you finished your function and `blockFor1Sec` is going to popped off from the `CallStack`, and `printHello` it's been waiting there quite eagerly, very excited, say I wanna come out, I wanna be out of queue into the `Call Stack`
+
+And finally at `1001ms`, what do we think happens? is it `printHello` allowed out from `CallBack Queue` to the `Call Stack`?
+
+Nooooo, it's still not allowed out. And `printHello` is gonna sit there and wait, and instead what's going to run first? `console.log("Me First")`
