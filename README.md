@@ -486,3 +486,5 @@ console.log("Me First");
 ```
 
 when you call `fetch` => it's actually a lebel in JavaScript to setup a `Network Request` to speak to the internet, Not in JavaScript, JavaScript can't do it, but `Web Browser can`
+
+But it also, `simultaniously` in `JavaScript` returns out a `little` object, that's gonna be called `Promise`
