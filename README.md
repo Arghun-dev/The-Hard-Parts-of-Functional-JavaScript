@@ -428,3 +428,5 @@ But if the `CallStack` is empty, or if I head down to the `queue`, I grab the fu
 ## And that feature is known as the `Event Loop`
 
 ## And `Event Loop's job` is simply to very quickly be checking very constantly => `is The Call Stack Empty?` `is there anything in the queue?` `is there any global code to run?` `If no, finally I get down to the queue`, `Finally, when all the global code is finished running` => `what happens?` => `It heads down to the queue` => `It says yes, I'm ready to head down to the queue` => `It grabs printHello, and sits on to the Call Stack` => `It puts the parenthises for us, no problem and prints hello`
+
+## And it was the entire model of `Asynchronous JavaScript`
