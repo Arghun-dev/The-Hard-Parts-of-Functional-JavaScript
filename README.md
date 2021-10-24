@@ -445,3 +445,30 @@ But if the `CallStack` is empty, or if I head down to the `queue`, I grab the fu
 
 
 A lot of times these background features, the function that's then automatically called, the background feature gets some data, so for example if the background feature, speaking over the network, to get some new data in, well then where that data gonna show up, that data shows up as the input, automatically inserted into the running of that `printHello` function, that's pretty amazing, But problem with that, is that means, is the data is only available inside the `execution context` of that `printHello` function? that's pretty rough, and that's what created something known as `callback hell`
+
+
+# Promises
+
+**ES6+ Solution (Promises)**
+
+Using two-pronged facade functions that both:
+
+- Initiate background web browser work and
+- Return a placeholder object (Promise) immediately in JavaScript
+
+`Promise would be this`, when I have this model here, when I use `setTimeout`, did `setTimeout` do anything in JavaScript? it's consequence was in the `web browser`, but once I set a timer in the `web browser`, keeping track of the fact that I've started it, or other background features, I didn't really get any way of tracking that back in JavaScript, in JavaScript I kind of just threw them up, there's no consolel visual for web browser features, but have it have some sort of consequence in JavaScript memory as well. So that I have a consistency between things going on the background is gonna have some consequnce back in JavaScript at some point. 
+
+And one of those facade functions in ES6 is `fecth` => `fetch` is a label for a web browser feature of `Network Request` => `Speaking to the internet` => it does setup a `newtwork request` in the web browser features, but rather than just doing that, and then nothing know in JavaScript back on, it's gonna have a consequnce immediately in JavaScript as well. This `fetch` label is gonna trigger speaking to the internet down here (Web Browser) => sending a network request, speaking to the internet, asking for data from `Twitter`, And `Simultinously`, it's going to also in JavaScript return out a special kind of `Object` => Called **`Promise` Object** that's going to sit in `memory`, and when the background work is done here, that's going to fill in and update that object's data with the data from the background, and now when we finish our background work, we're not surprised that something gonna have a result back in JavaScript, because we had a two pronged facade functions, background feature, when it completes, it's going to have consequence for that immediately returned down JavaScript object
+
+```js
+function printHello() {
+  console.log("Hello");
+}
+
+function blockFor1Sec() { ... }
+
+setTimeout(printHello, 0);
+
+blockFor1Sec();
+console.log("Me First");
+```
