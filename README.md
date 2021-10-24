@@ -528,3 +528,5 @@ They setup in the background,
 - they speak to the internet, with all the information it needs to go and get the right data back 
 - but they also setup in JavaScript a little placeholder object => known as a `Promise` object
 - And that was stored into futureData
+
+But, we don't know when the data comes back, => but as we said the functions inside of `onfullfilled` empty array automatically, trigger to run when the data comes back from the server
