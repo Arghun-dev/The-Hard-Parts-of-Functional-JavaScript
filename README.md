@@ -413,6 +413,11 @@ So, People can we try and ascertain, what was our rule for when a function in th
 
 ### So when the functions inside queue will run? => after all the functions inside global execution context runned. you could have a million console.logs, your code inside the queue will run after a million console.logs :)))
 
-What is the rule, by which after it's been sitting, in the queue, and waiting to allowed out from queue into the Call Stack.
+## All the reqular code will run first, until I ever touch anything from the queue, until I ever put anything out of the queue
 
+## So, how does JavaScript implement that?
+
+Well, it has an amazing feature, which says I'm gonna check before every single line of code => is the `CallStack` empty? => is the CallStack empty? is there something in the `queue`?
+
+If the CallStack is not empty, if there's still further global code to run, **Then, I will not even go to look at the `queue`**
 
