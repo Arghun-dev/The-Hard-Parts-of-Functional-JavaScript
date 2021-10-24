@@ -625,4 +625,6 @@ Tips:
 
 **When your request fails, the `Promise` object gives us an amazing feature, if we get an error back, not the actual `response` object we want, It's not gonna run the functions inside `onfullfilled` array, It's gonna trigger any functions you've stored in `onRejection`, how do we pass functions into `onRejection`? there is two ways, First one is `.catch` any functions that's written in there, it's gonna passed to the `onRejection` and the other way, is to pass to `.then` as the second argument**
 
+**Promises, Web APIs, Callback & Microtask Queues and Event Loop enable: `Non-blocking applications: this means we don't have to wait in the single thread and don't block further code from running`, However Long it takes: `We cannot predict when our browser features work will finish, so we let JS handle automatically running the function on it's completion`, Web applications: `Asynchronous JavaScript is the backbone of the modern web letting us build fast non-blocking applications`**
+
 ### hufffff => That was the entire model of the `Asynchronous JavaScript`
