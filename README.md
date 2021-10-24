@@ -620,4 +620,6 @@ Tips:
 
 **Any functions that is attached to a `Promise` object by one of these two pronged facade functions those functions are going into the `microtask queue`, And any function that's passed directly to a facade function that triggers a web browser feature, those functions when the timer completes => these functions will be passed to the `callback queue`**
 
+**You have to look at your function and see, does our particular facade function that trigger stuff in the background, does it take in a function? => That ones going to go into the callback queue. Or does it return out `Two pronged, a Promise object and they task in the background` => they will go to the `Microtask queue`**
+
 ### hufffff => That was the entire model of the `Asynchronous JavaScript`
