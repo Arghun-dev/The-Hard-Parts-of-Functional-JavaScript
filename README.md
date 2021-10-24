@@ -612,5 +612,10 @@ futureData.then(display)
 - So, once the `Event Loop` at `1003ms` goes, we're clear synchronous global code, where do you think it `(Event Loop)` heads to first? => **Answer: `Microtask queue`**
 - It grabs `display`, it `dequeues` it and push it on to the `Call Stack` with the inserted argument automatically. And it executes it. and popped off the call stack `display`
 - And finally `printHello` function can go to the `Call Stack` and executes the function
+- So we have `2 queues`
+
+Tips:
+
+**behind the scenes the `value property` of `Promise` object is never filled in actually, Until all global code finished running, So we can't get even access to it at that point**
 
 ### hufffff => That was the entire model of the `Asynchronous JavaScript`
