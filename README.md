@@ -550,3 +550,41 @@ Now we're back to our global memory => in `1ms` the `console.log("Me First")` wi
 And then for example in `270ms` our data comes back from `Twitter` and web browser `Network Request` is complete now => So, on completion, we will get response from Twitter, but it's still in the `Web Browser` => How does it get back into the `JavaScript`? => `futureData value property`
 
 so in `270ms` we are going to call, we're going to call `display` function with the argument of `futureData value property`
+
+
+## But we need to know how our promise-deferred functionality gets back into JavaScript to be run
+
+when does that function, that was delayed, deferred, by being attached to the `Promise` object `onfullfillment` array?
+
+you know what, get back into the `Call Stack` it's in JavaScript => `get back into the Call Stack in order to be executed`
+
+**then method and functionality to call on completion**
+
+Any code we want to run on the returned data must also be saved on the `Promise` object
+
+Added using `.then` method to the hidden property `onFulfilment`
+
+Promise objects will automatically trigger the attached function to run (with its input being the retuned data)
+
+```js
+function display(data) { console.log(data) };
+function printHello() { console.log('Hello') };
+function blockFor1Sec() { ... // blocks code for 1 second };
+
+setTimeout(printHello, 0);
+
+const futureData = fecth(API);
+futureData.then(display);
+
+blockFor1Sec();
+console.log("Me First");
+```
+
+`Asynchronous meanin`: `It means doing code out of order when you saw it from when it was said to be done`.
+
+So, when we see normal JavaScript code, if a line says do the code, I do it right then, `Asynchronous say no no no` => `JavaScript is gonna handle when that functionality comes back in` And `it's gonna be out of order of when you trigger the Browser feature` => Now we can actually `have code that's gonna be run after all of our regular code is run`
+
+when we run this code:
+
+- store function definitons of diplay and printHello and blockFor1Sec
+- at 0ms `setTimeout(printHello, 0)` => it's going to set the `Timer feature of Web Browser` with the duration of  `0ms` and on completion of duration, function definition `printHello` and send the function definition of `printHello` to the `Callback Queue` on completion. And the function `printHello` is waiting to be sent to the `Call Stack` and to be run after that. But this is the place, where `Event Loop` comes to play, `Event Loop` constantly checking if there is any funciton or code to be run inside our `Call Stack` or if there is any code to be run inside of our `global memory` => If there is, then the `printHello` function inside of our `Call Stack` will have to wait, but if there's not any code inside of out `Call Stack` and `global memory` so printHello function can be put on to the `Call Stack` and then can be run.
