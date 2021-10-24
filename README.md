@@ -407,3 +407,12 @@ And finally at `1001ms`, what do we think happens? is it `printHello` allowed ou
 Nooooo, it's still not allowed out. And `printHello` is gonna sit there and wait, and instead what's going to run first? at `1001ms` => `console.log("Me First")`
 
 Now, at the `1002ms` => `printHello` is going to grabbed out of queue and put on to the callStack and going to executed.
+
+
+So, People can we try and ascertain, what was our rule for when a function in the `queue` that's being thrown out by using these facade functions, out into the web browser, `setTimeout` ain't doing anything in JavaScript, instead it's just grabbing that function, throw it out here (web browser features)
+
+### So when the functions inside queue will run? => after all the functions inside global execution context runned. you could have a million console.logs, your code inside the queue will run after a million console.logs :)))
+
+What is the rule, by which after it's been sitting, in the queue, and waiting to allowed out from queue into the Call Stack.
+
+
