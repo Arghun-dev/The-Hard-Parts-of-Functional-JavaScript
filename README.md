@@ -472,3 +472,17 @@ setTimeout(printHello, 0);
 blockFor1Sec();
 console.log("Me First");
 ```
+
+ES6+
+
+```js
+function display(data) {
+  console.log(data)
+}
+
+const futureData = fetch(API).then(display);
+
+console.log("Me First");
+```
+
+when you call `fetch` => it's actually a lebel in JavaScript to setup a `Network Request` to speak to the internet, Not in JavaScript, JavaScript can't do it, but `Web Browser can`
