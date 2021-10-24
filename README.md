@@ -503,7 +503,8 @@ So `Promise:`
 ```js
 Promise = {
  value: undefined,
- onfullfilled: []
+ onfullfilled: [],
+ onRejection: []
 }
 ```
 
@@ -621,5 +622,7 @@ Tips:
 **Any functions that is attached to a `Promise` object by one of these two pronged facade functions those functions are going into the `microtask queue`, And any function that's passed directly to a facade function that triggers a web browser feature, those functions when the timer completes => these functions will be passed to the `callback queue`**
 
 **You have to look at your function and see, does our particular facade function that trigger stuff in the background, does it take in a function? => That ones going to go into the callback queue. Or does it return out `Two pronged, a Promise object and they task in the background` => they will go to the `Microtask queue`**
+
+**When your request fails, the `Promise` object gives us an amazing feature, if we get an error back, not the actual `response` object we want, It's not gonna run the functions inside `onfullfilled` array, It's gonna trigger any functions you've stored in `onRejection`, how do we pass functions into `onRejection`? there is two ways, First one is `.catch` any functions that's written in there, it's gonna passed to the `onRejection` and the other way, is to pass to `.then` as the second argument**
 
 ### hufffff => That was the entire model of the `Asynchronous JavaScript`
