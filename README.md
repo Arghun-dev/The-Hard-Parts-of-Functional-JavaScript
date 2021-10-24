@@ -530,3 +530,23 @@ They setup in the background,
 - And that was stored into futureData
 
 But, we don't know when the data comes back, => but as we said the functions inside of `onfullfilled` empty array automatically, trigger to run when the data comes back from the server
+
+We can put any function inside this empty array. and any function we stick in this array will be automatically triggered to run, when the `value` property gets updated, and more importantly, that `data of value` property will be auto inserted as the input as the `argument`, to fill the `parameter` of any functoin that's stored in here
+
+But how would we get display into that array?
+
+JavaScript gives us a method built in that allows us, whatever we pass to it as input, will be grabbed in stuck in that array. Where is that method come from?
+
+```js
+futureData.then(pass in the entire display function definition)
+```
+
+futureData is this object `Promise` => it has a `onfullfilled` property which is an empty array, and whatever function we pass to the `.then` is gonna be taken and pushed to the `onfullfilled` empty array.
+
+So, when the data comes back from the server, and the `value` property of `Promise` object is updated with the value property, this value or data will be passed as an argument to the function that we passed into the `onfullfilled` array.
+
+Now we're back to our global memory => in `1ms` the `console.log("Me First")` will be run.
+
+And then for example in `270ms` our data comes back from `Twitter` and web browser `Network Request` is complete now => So, on completion, we will get response from Twitter, but it's still in the `Web Browser` => How does it get back into the `JavaScript`? => `futureData value property`
+
+so in `270ms` we are going to call, we're going to call `display` function with the argument of `futureData value property`
