@@ -426,3 +426,5 @@ But if the `CallStack` is empty, or if I head down to the `queue`, I grab the fu
 ### And What is that know as that little feature? (That little feature that does that very very fast checking, every single line, before it runs any line of code, It checks is there anything on the call stack, if there is, just do it, is there anything left running global? => just do it => if it's all finished, head down to the queue)
 
 ## And that feature is known as the `Event Loop`
+
+## And `Event Loop's job` is simply to very quickly be checking very constantly => `is The Call Stack Empty?` `is there anything in the queue?` `is there any global code to run?` `If no, finally I get down to the queue`, `Finally, when all the global code is finished running` => `what happens?` => `It heads down to the queue` => `It says yes, I'm ready to head down to the queue` => `It grabs printHello, and sits on to the Call Stack` => `It puts the parenthises for us, no problem and prints hello`
