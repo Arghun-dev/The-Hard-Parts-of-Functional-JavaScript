@@ -488,3 +488,21 @@ console.log("Me First");
 when you call `fetch` => it's actually a lebel in JavaScript to setup a `Network Request` to speak to the internet, Not in JavaScript, JavaScript can't do it, but `Web Browser can`
 
 But it also, `simultaniously` in `JavaScript` returns out a `little` object, that's gonna be called `Promise`
+
+
+When you run this line of code:
+
+```js
+const futureData = fetch(API).then(displayData)
+```
+
+`fecth` is a `facade` function => it's gonna do both JavaScript for us, and `simultaniously` it's going to do some work in the background in the `Web Browser`, But let's do the JavaScript side first: => when you run this code, it is going to `immediately` => create an `object` => a `Promise object` for us. it's just an object automatically created in JavaScript by `fetch` => it has `two` properties => `value`, which is `undefined` nothing stored in it yet, and another property called `onfullfilled`, it's hidden but super important, which is an `empty array []` and this `Promise` object is going to be stored in the `futureData` label:
+
+So `Promise:`
+
+```js
+Promise = {
+ value: undefined,
+ onfullfilled: []
+}
+```
