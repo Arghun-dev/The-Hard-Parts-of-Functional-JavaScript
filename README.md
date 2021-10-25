@@ -673,11 +673,31 @@ user1.increment(); // user1.score -> 4
 ```
 
 ```js
-const user2 = Object.create(null);
+const user2 = Object.create(null); // it's going to create an empty object {}
 
 user3.name = 'Sahand';
 user3.score = 5;
 user3.increment = function() {
   user3.score++;
 }
+```
+
+Now as you can see we have object oriented programming => But what rule we're breaking => `DRY` => `Don't Repeat Your Self`
+
+**Solution1:** Generate objects using a function
+
+```js
+function userCreator(name, score) {
+  const newUser = {};
+  newUser.name = name;
+  newUser.score = score;
+  newUser.increment = function() {
+    newUser.score++;
+  }
+  return newUser;
+}
+
+const user1 = newUser('Will', 3);
+const user2 = newUser('Tim', 5);
+user1.increment();
 ```
