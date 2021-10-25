@@ -735,3 +735,7 @@ const userFunctionStore = {
 const user1 = userCreator("Will", 3);
 const user2 = userCreator("Arghun", 6);
 ```
+
+**If you create an object using `object.create(someObject)` => It's going to gives us access inside that object a hidden property called `__proto__` which is a link to the object we passed to that `object.create(someObject)` `(someObject)` => this is because of nature of `prototypal chain` of `JavaScript` feature, it's a JavaScript feature**
+
+**Point is that, `object.create(userFunctionStore)` => does create an empty object, but inside that object, there is a hidden property called `__proto__` which is link our our object to the `userFunctionStore` object => `__proto__` => this proto link, this chain connection from `user1` up to `userFunctionStore` => this is because JavaScript `prototypal feature` => `That means when it does not find on the object A given property, method or data, it does not panic, instead it goes straight to the __proto__ property, and it looks at what is linking to up the prototype chain`**
