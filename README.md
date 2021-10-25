@@ -637,3 +637,47 @@ Tips:
 - The new and class keywords as tools to automate our object & method creation
 
 Once of the most important questions which asked in interviews is: => `what's new keyword doing under the hood?`
+
+**I want my code to be:**
+
+1. Easy to reason about
+2. Easy to add features (new functionality)
+3. Nevertheless efficient and performant
+
+The Object-oriented paradigm aims is to let us achieve these three goals
+
+**So if I'm storing each user in my app with their respective data**
+
+user1:
+ - name: 'Tim'         
+ - score: 3
+
+user2:
+ - name: 'Arghun'
+ - score: 5
+
+And the functionality I need to have for each user (again simplifying!)
+
+ - increment functionality (there'd be a ton of functions in practice)
+
+How could I store my data and functionality together in one place? => `in an object`
+
+```js
+const user1 = {
+  name: "Will",
+  score: 3,
+  increment: function() { user1.score++; }
+}
+
+user1.increment(); // user1.score -> 4
+```
+
+```js
+const user2 = Object.create(null);
+
+user3.name = 'Sahand';
+user3.score = 5;
+user3.increment = function() {
+  user3.score++;
+}
+```
