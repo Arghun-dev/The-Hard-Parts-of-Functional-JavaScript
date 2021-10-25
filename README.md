@@ -704,3 +704,34 @@ user1.increment();
 
 So, what is wrong with this style of writing code, that I could never use this: `We're storing the same function twice`
 And also in here we have another problem: `If you wanna add a new feature to this, you hava to add it to each user`
+
+**Can anybody propose a better way?**
+
+It could be better if we store our functions in another object and each user can access to the function store object and grab that function and use it.
+
+So
+
+**Solution2: Using the prototype chain**
+
+Store the increment function in just one object and have the interpreter, if it doesn't find the function on user1, look up to that object to check if it's there
+
+Link user1 and functionStore so the interpreter, on not finding `.increment`, makes sure to check up in functionStore where it would find it
+
+Make the link with `Object.create()` technique
+
+```js
+function userCreator(name, score) {
+  const newUser = Object.create(userFunctionStore);
+  newUser.name = name;
+  newUser.score = score;
+  return newUser;
+}
+
+const userFunctionStore = {
+  increment: function() { this.score++; },
+  login: function() { console.log("Logged in") }
+}
+
+const user1 = userCreator("Will", 3);
+const user2 = userCreator("Arghun", 6);
+```
