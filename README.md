@@ -628,3 +628,12 @@ Tips:
 **Promises, Web APIs, Callback & Microtask Queues and Event Loop enable: `Non-blocking applications: this means we don't have to wait in the single thread and don't block further code from running`, However Long it takes: `We cannot predict when our browser features work will finish, so we let JS handle automatically running the function on it's completion`, Web applications: `Asynchronous JavaScript is the backbone of the modern web letting us build fast non-blocking applications`**
 
 ### hufffff => That was the entire model of the `Asynchronous JavaScript`
+
+# Class & OOP
+
+- An enormously popular paradigm for structuring our complex code
+- Prototype chain - the feature behind the scenes that enables emulation of OOP but is a compelling tool in itself.
+- Understanding the difference between __proto__ and prototype
+- The new and class keywords as tools to automate our object & method creation
+
+Once of the most important questions which asked in interviews is: => `what's new keyword doing under the hood?`
