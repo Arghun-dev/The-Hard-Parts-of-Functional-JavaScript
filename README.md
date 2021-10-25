@@ -701,3 +701,6 @@ const user1 = newUser('Will', 3);
 const user2 = newUser('Tim', 5);
 user1.increment();
 ```
+
+So, what is wrong with this style of writing code, that I could never use this: `We're storing the same function twice`
+And also in here we have another problem: `If you wanna add a new feature to this, you hava to add it to each user`
