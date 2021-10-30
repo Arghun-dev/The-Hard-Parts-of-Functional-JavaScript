@@ -822,3 +822,19 @@ multiplyBy2.prototype // {}
 ```
 
 We could use the fact that all functions have a default property `prototype` on their object version, (itself an object) - to replace our `functionStore` object
+
+when we use `()` => actually we're running this function, and also we have our object using the `.` notation.
+
+```js
+multiplyBy2 => function + object
+```
+
+```js
+object = {
+  stored: 5
+}
+```
+
+**And all functions also have by default, they have a property, `prototype`**
+
+**All functions in their `object` format automatically have a property called `prototype`, it's not a hidden property => and it's default equals to `empty object`**
