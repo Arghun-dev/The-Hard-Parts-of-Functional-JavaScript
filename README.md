@@ -774,3 +774,17 @@ nowadays, we declare and save our functions in arrow function style, because whe
 when we are running `add1` in it's local memory, because this is an arrow function => is `this` assignment in our local memory, will it be global?
 
 Remember our one simple rule, is any function, that's being run to the right hand side of the `.` whatever the left hand side that's gonna be `this` assignment. But when there's no `.` in here => `add1()`? => it defaults to global `window`, unless that function was defined as an arrow function. in this case our `this` assignment will be `user1` exacylt what was this assignment around the definition of that one, is lexically scoped.
+
+## Solution 2 (Using the prototype chain)
+
+**Problems: ** No Problem, It's beautiful, maybe a little long-winded
+
+write this every single time - but it's 6 words!
+
+```js
+const newUser = Object.create(userFunctionStore);
+...
+return newUser;
+```
+
+**Benefits: ** super sophisticated but not standard.
