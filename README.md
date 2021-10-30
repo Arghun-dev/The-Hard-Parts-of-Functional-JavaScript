@@ -742,4 +742,8 @@ const user2 = userCreator("Arghun", 6);
 
 So, now I'm going to run this function, `this.score++` => this is actually when I run => `user1.increment();` => `user1.score++;`
 
-**All objects in JavaScript have a `__proto__` property**
+### hasOwnProperty
+
+It turns out people, that there is a big old headline object in JavaScript called => `Object.prototype` And it has a bunch of useful functions that are gonna be available to all of our objects. But how? Because =>
+
+**All objects in JavaScript have a `__proto__` property** that defaults to linking to the `Object.prototype` object. so our `userFunctionStore` is gonna link down to `Object.prototype` object.
