@@ -788,3 +788,21 @@ return newUser;
 ```
 
 **Benefits: ** super sophisticated but not standard.
+
+
+## What's the `new` keyword is actually doing behind the scenes? (interview question)
+
+## Solution3 (Introducing the `new` keyword that automates the hard work)
+
+When we call the function that returns an object with `new` in front we automate 2 things
+
+```js
+const user1 = new userCreator('Arghun', 20);
+```
+
+1. Create a `newUser` object
+2. Return the `newUser` object
+
+But now, we need to adjust how we write the body of `userCreator` - how can we?
+
+
