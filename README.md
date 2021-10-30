@@ -742,6 +742,16 @@ const user2 = userCreator("Arghun", 6);
 
 So, now I'm going to run this function, `this.score++` => this is actually when I run => `user1.increment();` => `user1.score++;`
 
+Actually, when you are running the code:
+
+```js
+user1.increment();
+```
+
+increment is => `this.score++`
+
+it's going to create an execution context and inside of that execution context => in the `localMemory` of that execution context => it's going to save an implicit parameter `this` and assign it to `user1` actually.
+
 ### hasOwnProperty
 
 It turns out people, that there is a big old headline object in JavaScript called => `Object.prototype` And it has a bunch of useful functions that are gonna be available to all of our objects. But how? Because =>
