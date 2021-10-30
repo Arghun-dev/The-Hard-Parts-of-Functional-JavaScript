@@ -805,4 +805,20 @@ const user1 = new userCreator('Arghun', 20);
 
 But now, we need to adjust how we write the body of `userCreator` - how can we?
 
+**functions are both objects and functions in javascript**
 
+loo at this example:
+
+```js
+function multiplyBy2(num) {
+  return num*2;
+}
+
+multiplyBy2.stored = 5;
+multiplyBy2(3) // 6
+
+multiplyBy2.stored // 5
+multiplyBy2.prototype // {}
+```
+
+We could use the fact that all functions have a default property `prototype` on their object version, (itself an object) - to replace our `functionStore` object
