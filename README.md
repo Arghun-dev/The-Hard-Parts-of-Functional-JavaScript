@@ -741,3 +741,5 @@ const user2 = userCreator("Arghun", 6);
 **Point is that, `object.create(userFunctionStore)` => does create an empty object, but inside that object, there is a hidden property called `__proto__` which is link our our object to the `userFunctionStore` object => `__proto__` => this proto link, this chain connection from `user1` up to `userFunctionStore` => this is because JavaScript `prototypal feature` => `That means when it does not find on the object A given property, method or data, it does not panic, instead it goes straight to the __proto__ property, and it looks at what is linking to up the prototype chain`**
 
 So, now I'm going to run this function, `this.score++` => this is actually when I run => `user1.increment();` => `user1.score++;`
+
+**All objects in JavaScript have a `__proto__` property**
