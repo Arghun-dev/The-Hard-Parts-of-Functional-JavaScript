@@ -757,3 +757,20 @@ it's going to create an execution context and inside of that execution context =
 It turns out people, that there is a big old headline object in JavaScript called => `Object.prototype` And it has a bunch of useful functions that are gonna be available to all of our objects. But how? Because =>
 
 **All objects in JavaScript have a `__proto__` property** that defaults to linking to the `Object.prototype` object. so our `userFunctionStore` is gonna link down to `Object.prototype` object.
+
+## Declaring and calling a new function inside our method increment
+
+```js
+const userFunctionStore = {
+  increment: function() {
+    const add1 = () => { this.score++ }
+    add1();
+  }
+}
+```
+
+nowadays, we declare and save our functions in arrow function style, because when we save functions using arrow function style, it's going to automatially, is lexicallt scoped. That means, when we save the function and execute it, this is set to is determined by where the function was saved, so if it was saved where this is user1, when we end up running it `this` inside will be the value from where the function was saved, which is `user1`,
+
+when we are running `add1` in it's local memory, because this is an arrow function => is `this` assignment in our local memory, will it be global?
+
+Remember our one simple rule, is any function, that's being run to the right hand side of the `.` whatever the left hand side that's gonna be `this` assignment. But when there's no `.` in here => `add1()`? => it defaults to global `window`, unless that function was defined as an arrow function. in this case our `this` assignment will be `user1` exacylt what was this assignment around the definition of that one, is lexically scoped.
