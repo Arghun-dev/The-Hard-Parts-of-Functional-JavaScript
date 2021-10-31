@@ -949,3 +949,7 @@ userCreator.prototype.increment = function definition of increment
 ```
 
 So, we create a `class` which is a function object combo, and the first bit of it, we give a subtitle `constructor` and you can see it's identical that first thing we store in it, subtitle constructor is the `function` bit of the function object combo, and then all the functions we list out in the below, behind the scenes javascript is going to run userCreator.prototype.increment = ?.
+
+**Summary of OOP**
+
+We saw here, `classes`, `prototype`, `prototype chain`, the `__proto__` property that is not the `prototype` property, but does link to the `prototype` property, We saw how `new` and `class` are not changing anything under the hood, besides automating and giving us a shorthand way of achieving directly with `Object.create`, manually fine-grained control, We saw that `this` keyword, we saw how arrow functions can give us even more control over that.
