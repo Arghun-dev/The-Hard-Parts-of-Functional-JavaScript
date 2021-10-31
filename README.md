@@ -911,4 +911,21 @@ user1.increment();
 
 We're writing our shared methods seperately from our object `constructor` itself (off in the userCreator.prototype object)
 
-Other languages let us do this all in one place. ES2015 lets us do so too
+Other languages let us do this all in one place. ES2015 lets us do so too.
+
+Until now we decalared our shared methods separately, let's do this in one place.
+
+```js
+class UserCreator {
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+  }
+  
+  increment() { this.score++ };
+  login() { console.log("login") }
+}
+
+const user1 = new UserCreator("Eva", 9);
+user1.increment();
+```
