@@ -838,3 +838,31 @@ object = {
 **And all functions also have by default, they have a property, `prototype`**
 
 **All functions in their `object` format automatically have a property called `prototype`, it's not a hidden property => and it's default equals to `empty object`**
+
+
+### new keyword
+
+the `new` keyword is gonna automate so much stuff for us:
+
+1. It's going to create automatically inside of here an object for us
+2. It's going to return out that object for us automatically
+3. It's going to make the link to some objects full of functions out here automatically for us, going to set the `__proto__` property automatically for us as well
+
+When we are calling this line of code:
+
+```js
+function userCreator(name, score) {
+  this.name = name;
+  this.score = score;
+}
+
+const user1 = new userCreator("Arghun", 5);
+```
+
+It's just going to call the `userCreator()` nothing magic. But it's going to do some stuff inside of function call `userCreator`
+
+when we run the code above:
+
+1. in it's local memory, it's going to save `name: "Arghun"` and `score: 5` and it's going to create an empty object with the label of `this` => `this: {}`
+
+**And more interestingly it's going to link the `this object` through the `__proto__` link to the `prototype` object which was created when we we're defining the `userCreator` function. which is an object with full of the functions we put in there. Fantasticc!!!!**
