@@ -906,3 +906,9 @@ userCreator.prototype.login = function() { console.log("login") };
 const user1 = new userCreator("Eva", 9);
 user1.increment();
 ```
+
+## Solution 4: The class `syntactic sugar`
+
+We're writing our shared methods seperately from our object `constructor` itself (off in the userCreator.prototype object)
+
+Other languages let us do this all in one place. ES2015 lets us do so too
