@@ -26,7 +26,7 @@ Created to run the code of a function - has 2 Parts (We've already seen them)
 - Finish running the function - JS removes it from the call stack
 - Whatever is top of the CallStack - that's the function we're currently running
 
-**What keyword tells us actually to end this function and move on** => `return`
+**What keyword tells us actually to end \ function and move on** => `return`
 
 as soon as we `return` the function will be popped off from the call stack.
 
@@ -53,7 +53,7 @@ function copyArrayAndManipulate(array, instructions) {
   for(let i = 0; i < array.length; i++) {
      output.push(instructions(array[i]))
   }
-  
+   
   return output;
 }
 
