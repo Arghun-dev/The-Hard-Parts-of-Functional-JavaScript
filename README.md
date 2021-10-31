@@ -876,3 +876,5 @@ this: {
   __proto__ => // which is a link to the prototype object
 }
 ```
+
+3. Return `this` is the last this that `new` keyword automatically does for us.
