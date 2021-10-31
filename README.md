@@ -866,3 +866,13 @@ when we run the code above:
 1. in it's local memory, it's going to save `name: "Arghun"` and `score: 5` and it's going to create an empty object with the label of `this` => `this: {}`
 
 **And more interestingly it's going to link the `this object` through the `__proto__` link to the `prototype` object which was created when we we're defining the `userCreator` function. which is an object with full of the functions we put in there. Fantasticc!!!!**
+
+2. __proto__ : userCreator.prototype => this is automatically done for us. and `this` would be
+
+```js
+this: {
+  name: "Eva",
+  score: 9,
+  __proto__ => // which is a link to the prototype object
+}
+```
