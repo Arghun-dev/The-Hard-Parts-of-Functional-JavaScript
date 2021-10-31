@@ -878,3 +878,13 @@ this: {
 ```
 
 3. Return `this` is the last this that `new` keyword automatically does for us.
+
+So finally the `user1` would be
+
+```js
+user1: {
+  name: "Eva",
+  score: 9,
+  __proto__
+}
+```
