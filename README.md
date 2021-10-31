@@ -929,3 +929,21 @@ class UserCreator {
 const user1 = new UserCreator("Eva", 9);
 user1.increment();
 ```
+
+As soon as you declare a `class` what do we think we get people? => we get a `function` + `object` combo.
+
+And the first bit of the function object combo, we give the subtitle `constructor`, and that's the `function` bit.
+
+And of course it get's on it, in the function object combo, in the `object` bit, a `prototype` property which is an object full of functions, but not yet.
+
+And inside the `class` when we are running and defining the for example =>
+
+```js
+increment() { this.score++ }
+```
+
+behind the scenes in JavaScript it's going to run =>
+
+```js
+userCreator.prototype.increment = function definition of increment
+```
