@@ -947,3 +947,5 @@ behind the scenes in JavaScript it's going to run =>
 ```js
 userCreator.prototype.increment = function definition of increment
 ```
+
+So, we create a `class` which is a function object combo, and the first bit of it, we give a subtitle `constructor` and you can see it's identical that first thing we store in it, subtitle constructor is the `function` bit of the function object combo, and then all the functions we list out in the below, behind the scenes javascript is going to run userCreator.prototype.increment = ?.
