@@ -907,7 +907,7 @@ const user1 = new userCreator("Eva", 9);
 user1.increment();
 ```
 
-## Solution 4: The class `syntactic sugar`
+## Solution 4: The `class` syntactic sugar
 
 We're writing our shared methods seperately from our object `constructor` itself (off in the userCreator.prototype object)
 
