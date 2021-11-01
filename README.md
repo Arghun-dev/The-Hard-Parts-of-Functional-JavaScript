@@ -715,6 +715,8 @@ So
 
 **Solution2: Using the prototype chain**
 
+JavaScript has it's own `prototypal feature`, that means when it does not find on the object a given property, method or data, it does not panic, instead it goes straight to the `__proto__` property, and it looks at what is linking to, up the `prototype chain`.
+
 Store the increment function in just one object and have the interpreter, if it doesn't find the function on user1, look up to that object to check if it's there
 
 Link user1 and functionStore so the interpreter, on not finding `.increment`, makes sure to check up in functionStore where it would find it
