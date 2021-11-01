@@ -754,7 +754,9 @@ user1.increment();
 
 increment is => `this.score++`
 
-it's going to create an execution context and inside of that execution context => in the `localMemory` of that execution context => it's going to save an implicit parameter `this` and assign it to `user1` actually.
+it's going to create an execution context and inside of that execution context => in the `localMemory` of that execution context => it's going to save an implicit parameter `this` and assign it to `user1` actually. That means, I don't even specify, It's one that's automatically there and automatically filled in for me => And it's called `this`.
+
+That means, as soon as I start running this method => `user1.increment()` => in my local memory, it's automatically, I get an implicit parameter placeholder, implicit meaning I didn't write it, it's there for me, And it's going to automatically assign to what? => in this case `user1` => It's actually saving in the local memory this => `this: user1` => And when we running => `this.score++` => it's going to be exactly this => `user1.score++`
 
 ### hasOwnProperty
 
