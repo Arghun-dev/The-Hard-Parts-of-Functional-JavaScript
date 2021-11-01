@@ -682,6 +682,8 @@ user3.increment = function() {
 }
 ```
 
+**whether I pass an object or I pass nothing to the `Object.create` it's going to create an empty object actually, now that empty object might have some hidden properties on depending on what we pass in**
+
 Now as you can see we have object oriented programming => But what rule we're breaking => `DRY` => `Don't Repeat Your Self`
 
 **Solution1:** Generate objects using a function
