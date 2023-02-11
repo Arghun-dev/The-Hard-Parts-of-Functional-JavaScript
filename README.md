@@ -241,7 +241,7 @@ Because when you run `myNewFunction` and `anotherFunction` they will create tota
 - The event loop: JavaScript's triage
 - Microtask queue, Callback queue and Web Browser features (APIs)
 
-**JavaScript is a `single threaded` language it means that JavaScript runs the code `line by line`** => So JavaScript is `synchronous` language
+**JavaScript is a `synchronous` language it means that JavaScript runs the code `line by line`** => and it is `single threaded` language which means it does one thing at a time.
 
 that means we do each line, we finish it, and then we go to the next line.
 
